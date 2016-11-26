@@ -1,4 +1,4 @@
-#include "HatNet.h"
+#include "radiopixel_protocol.h"
 
 HatPacket::HatPacket( )
     : command( HC_NONE ), brightness( 255 ), speed( 100 ), 
