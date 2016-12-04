@@ -23,21 +23,24 @@
 
 #pragma pack( push, 1 )
 
-class HatPacket
+namespace RadioPixel
+{
+
+class Command
 {
 public:
-    HatPacket( );
+    Command( );
 
-    HatPacket( int _brightness, int _speed, int _pattern,
+    Command( int _brightness, int _speed, int _pattern,
         uint32_t color1, uint32_t color2, uint32_t color3,
         uint8_t level1 = 255, uint8_t level2 = 255, uint8_t level3 = 255 );
 
-    bool operator==( const HatPacket& rhs ) const
+    bool operator==( const Command& rhs ) const
     {
-        return memcmp( this, &rhs, sizeof( HatPacket ) ) == 0;
+        return memcmp( this, &rhs, sizeof( Command ) ) == 0;
     }
 
-    bool operator!=( const HatPacket& rhs ) const
+    bool operator!=( const Command& rhs ) const
     {
         return !( *this == rhs );
     }
@@ -80,6 +83,8 @@ public:
     // levels
     uint8_t level[ 3 ];
 };
+
+} // namespace
 
 #pragma pack( pop )
 
