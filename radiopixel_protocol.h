@@ -48,10 +48,10 @@ public:
     // HC_XXX
     uint8_t command;
 
-    // brightness
+    // brightness, 0 (off) - 255 (maximum)
     uint8_t brightness;
 
-    // speed in percent
+    // speed in percent, 0 (stopped/slowest) - 255 (2.55x speedup)
     uint8_t speed;
 
     // patterns
