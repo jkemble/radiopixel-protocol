@@ -16,6 +16,9 @@
 #define HN_CONTROLLERID  2    // controller/transmitter
 #define HN_NODEID        1    // hat/receiver
 
+// socket
+#define HN_PORT         7740
+
 // commands
 #define HC_NONE         0 // no command
 #define HC_CONTROL	1 // brightness and speed only
